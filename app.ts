@@ -1,10 +1,18 @@
-console.log('Hello World!');    // Output: Hello World!
+function add(n1: number, n2: number): number {
+    return n1 + n2;
+}
 
-// Path: app.ts
+function printOrReturnResult(n1: number, n2: number, showResult: boolean) {
+    const result = add(n1, n2);
+    if (showResult) {
+        console.log(result);
+    }else {
+        return result;
+}
+}
 
-// Declaring a variable
+const number1 = 5;
+const number2 = 2.8;
+const printResult = true;
 
-let message: string = 'Hello World!';
-console.log(message);    // Output: Hello World!
-
-// Path: app.ts
+printOrReturnResult(number1, number2, printResult);
